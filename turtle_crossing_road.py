@@ -10,6 +10,13 @@ s.bgcolor("black")
 s.tracer(0)
 
 #============================ Create the player's turtle======================================
+level_display.clear() 
+level_display.color("white")
+level_display.penup()
+level_display.goto(-280, 260)
+level_display.hideturtle()
+level_display.write(f"Level:1", align="left", font=("Courier", 16, "normal"))
+
 def turtle_move():
     t.penup()
     t.shape("turtle")
@@ -63,7 +70,7 @@ def move_obstacles():
 move_obstacles()
 
 #========================================= next levels =============================================
-level = 0  
+level = 1
 
 def check_next_level():
     global level, move_delay
